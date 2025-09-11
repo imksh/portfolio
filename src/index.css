@@ -1,0 +1,47 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bgColor: #0f172a;
+  --headerColor : #0c162f;
+  --mainColor : #b620bd;
+}
+html{
+  overflow-x: hidden;
+}
+body{
+  background-color: var(--bgColor);
+  color: white;
+  scroll-behavior: smooth;
+  scroll-snap-type: proximity;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+button{
+  cursor: pointer;
+}
+
+button:hover{
+  box-shadow: 0 0 10px 2px var(--mainColor);
+}
+
+a{
+  text-decoration: none;
+}
+
+
+@media (max-width:500px) {
+  body{
+    font-size : 0.8rem;
+  }
+}
