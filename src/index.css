@@ -24,7 +24,7 @@ body{
   scroll-behavior: smooth;
   scroll-snap-type: proximity;
   overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 button{
