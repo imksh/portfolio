@@ -47,7 +47,7 @@ export const About = () => {
                 <h2>About Me</h2>
                 <p>Hi, I’m Karan Sharma — a passionate self-taught developer and tech explorer. I love building responsive user interfaces, diving into full-stack projects, and exploring the world of ethical hacking and cybersecurity. Whether it’s creating something with React or experimenting in Linux, I’m always eager to learn, solve real-world problems, and push my boundaries. Tech isn’t just a skill for me — it’s something I genuinely enjoy and grow with every day.</p>
                 <div className={styles.btnDivAbout}>
-                    <a href="https://drive.google.com/file/d/1lcR9rGPO5rFj0tsnhGYpR96gCzejCRjL/view?usp=sharing"><button> <FaFileDownload/> Download CV</button></a>
+                    <a href="https://drive.google.com/drive/folders/1Ar5oRn0R4oCyd-CKKBih0-HI4eEYNYc4?usp=sharing"><button> <FaFileDownload/> Download CV</button></a>
                     <NavLink to="/myportfolio"><button><FaCode/> View Projects</button></NavLink>
                     
                 </div>

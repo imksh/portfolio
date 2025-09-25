@@ -17,12 +17,13 @@ export const Form = () => {
         <h3>Contact Me</h3>
         <form onSubmit={handleSubmit}>
       <label htmlFor="email">
-        Email Address
       </label>
       <input
         id="email"
         type="email" 
         name="email"
+        placeholder="Email"
+        style={{textAlign:"center"}}
       />
       <ValidationError 
         prefix="Email" 
@@ -35,6 +36,7 @@ export const Form = () => {
         placeholder="Write a message"
         rows="8"
         cols="25"
+        style={{padding:"10px"}}
       />
       <ValidationError 
         prefix="Message" 
