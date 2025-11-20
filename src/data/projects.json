@@ -1,5 +1,19 @@
 [
   {
+    "title": "Sakhi",
+    "desc": "Sakhi is a real-time chatting application with features such as one-to-one messaging, push notification, online status, and secure authentication.",
+    "tech": "React, JavaScript, Node.js, MongoDB",
+    "img": "/images/sakhi.png",
+    "link": "https://imksh-sakhi.netlify.app/"
+  },
+  {
+    "title": "CricFair",
+    "desc": "CricFair is an offline cricket scoring and team management app designed. The app enables real-time score tracking, predictive player selection for fair play, and live overlay integration for YouTube",
+    "tech": "React Native, Expo, TypeScript, Node.js",
+    "img": "/images/cricFair.jpg",
+    "link": "https://drive.google.com/drive/folders/1tNqfwN3Plb7wbqBZCrl7i03sOCfx1p4Z?usp=sharing"
+  },
+  {
     "title": "Threadly",
     "desc": "Threadly is a minimal social platform where users can sign up, create posts, explore public content, and connect with others.",
     "tech": "React, Spring Boot, MongoDB",

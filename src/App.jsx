@@ -1,50 +1,37 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import { AppLayout } from './components/layouts/AppLayout';
-import { Home } from './pages/Home';
-import { About } from './pages/About';
-import { Contact } from './pages/Contact';
-import { Portfolio } from './pages/Portfolio';
-
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { Contact } from "./pages/Contact";
+import { Portfolio } from "./pages/Portfolio";
+import { Scroll } from "./components/Scrool";
+import { Header } from "./components/ui/Header";
+import { Footer } from "./components/ui/Footer";
+import Project from "./pages/Project";
+import {Routes,Route} from "react-router-dom"
 
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
+      duration: 1000,
       once: false,
     });
   }, []);
-  const router = createBrowserRouter([ 
-    {
-    path: "/",
-    element : <AppLayout />,
-    children : 
-    [
-      {
-        path:"/",
-        element : <Home />
-      },
-      {
-        path:"/about",
-        element : <About />
-      },
-      {
-        path:"/myportfolio",
-        element : <Portfolio />
-      },
-      {
-        path:"/contact",
-        element : <Contact />
-      }
-    ]
-    
-  }
-]
-)
-
-  return <RouterProvider router={router} />
+  return (
+    <>
+      <Scroll />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/myportfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/project" element={<Project />} />
+      </Routes>
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;

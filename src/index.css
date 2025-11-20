@@ -1,10 +1,5 @@
 
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 *::before, *::after {
   box-sizing: border-box;
@@ -24,14 +19,22 @@ body{
   scroll-behavior: smooth;
   scroll-snap-type: proximity;
   overflow-x: hidden;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-button{
+button,select{
   cursor: pointer;
 }
 
 button:hover{
+  box-shadow: 0 0 10px 2px var(--mainColor);
+}
+
+input:hover{
+  box-shadow: 0 0 10px 2px var(--mainColor);
+}
+
+select:hover{
   box-shadow: 0 0 10px 2px var(--mainColor);
 }
 

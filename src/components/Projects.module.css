@@ -17,6 +17,9 @@
   box-shadow: var(--mainColor) 3px 3px 6px 0px inset,
     var(--mainColor) -3px -3px 6px 1px inset;
 }
+.cardImg{
+  padding: 10px;
+}
 .card img {
   width: 100%;
 }
@@ -51,14 +54,102 @@
   color: white;
   margin-top: 10px;
 }
+.viewMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.viewMore button {
+  padding: 1rem 4rem;
+  background: linear-gradient(
+    to right,
+    #c279a1,
+    #bc6da0,
+    #b562a0,
+    #ac56a0,
+    #a24ca2
+  );
+  border: 2px solid white;
+  border-radius: 15px;
+  color: white;
+}
+
+.header {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.inputDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.inputDiv input {
+  background-color: inherit;
+  padding: 15px 20px;
+  border: 2px solid white;
+  color: white;
+  width: 40%;
+  border-radius: 20px;
+}
+
+.inputDiv input::placeholder {
+  color: white;
+}
+
+.inputDiv input:focus{
+  border: 2px solid var(--mainColor);
+}
+
+.searchDiv {
+  flex-grow: 1;
+}
+.searchDiv button {
+  margin-left: 2%;
+  background-color: var(--mainColor);
+  color: white;
+  font-size: large;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.inputDiv select {
+  background-color: inherit;
+  color: white;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
 @media (max-width: 725px) {
   .projectContainer {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .inputDiv input {
+    width: 80%;
   }
 }
 
 @media (max-width: 525px) {
   .projectContainer {
     width: 85%;
+  }
+  .inputDiv {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .inputDiv input{
+    width: 90%;
+  }
+  .inputDiv select {
+    width: 75px;
+    padding: 10px 5px;
   }
 }
