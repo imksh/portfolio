@@ -32,7 +32,11 @@ const Project = () => {
             value={input}
             enterKeyHint="search"
             onChange={(e) => setInput(e.target.value)}
-            
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === "Search") {
+                e.target.blur(); 
+              }
+            }}
           />
         </div>
         <select value={filter} onChange={(e) => setFilter(e.target.value)}>
