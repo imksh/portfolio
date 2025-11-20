@@ -21,17 +21,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 70vh;
     font-size: x-large;
     width: 40vw;
     margin: 0 auto;
+    padding: 50px 0;
     box-shadow:var(--mainColor) 3px 3px 6px 0px inset, var(--mainColor) -3px -3px 6px 1px inset;
 }
 
 .container form input{
     margin-bottom: 1rem;
     width: 10rem;
-    height: 1.5rem;
+    padding: 5px ;
     background-color: inherit;
     border: none;
     border-bottom: 1px solid var(--mainColor);
