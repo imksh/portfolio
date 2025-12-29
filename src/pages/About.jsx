@@ -28,7 +28,7 @@ export const About = () => {
             <p>JavaScript</p>
             <p>React</p>
             <p>Java</p>
-            <p>Spring</p>
+            <p>ReactNative</p>
           </div>
           <div className={styles.btnDiv}>
             <a href="https://api.whatsapp.com/send?phone=7295038835&text=Hi%20Karan%2C%20I%20visited%20your%20portfolio%20and%20wanted%20to%20connect.">
