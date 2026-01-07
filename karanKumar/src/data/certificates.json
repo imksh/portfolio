@@ -1,0 +1,22 @@
+[
+  {
+    "img": "/images/nptel.png",
+    "title": "nptel"
+  },
+  {
+    "img": "/images/ricr.png",
+    "title": "ricr"
+  },
+  {
+    "img": "/images/udemy.png",
+    "title": "udemy"
+  },
+  {
+    "img": "/images/cpp.png",
+    "title": "cpp"
+  },
+  {
+    "img": "/images/naukri.png",
+    "title": "naukri"
+  }
+]
