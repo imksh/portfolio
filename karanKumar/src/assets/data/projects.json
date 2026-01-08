@@ -7,10 +7,24 @@
     "link": "https://imksh-sakhi.netlify.app/"
   },
   {
+    "title": "TrueRate",
+    "desc": "TrueRate is a simple Currency Converter as a weekend side project. You can convert between multiple currencies and see clean, instant results.",
+    "tech": "React , Tailwind, API",
+    "img": "/images/currency.png",
+    "link": "https://imksh-pages.netlify.app/currency-converter"
+  },
+  {
+    "title": "Wonders of World",
+    "desc": "This is a interactive “Wonders of the World” showcase that brings iconic landmarks to life using a cool slice animation effect. Each wonder animates in with motion and reveals a bit of its story — a small way to make learning visual and fun",
+    "tech": "React , Tailwind",
+    "img": "/images/wonders.png",
+    "link": "https://imksh-pages.netlify.app/wonders"
+  },
+  {
     "title": "CricFair",
     "desc": "CricFair is an offline cricket scoring and team management app designed. The app enables real-time score tracking, predictive player selection for fair play, and live overlay integration for YouTube",
     "tech": "React Native, Expo, TypeScript, Node.js",
-    "img": "/images/cricFair.jpg",
+    "img": "/images/cricfair.png",
     "link": "https://drive.google.com/drive/folders/1tNqfwN3Plb7wbqBZCrl7i03sOCfx1p4Z?usp=sharing"
   },
   {

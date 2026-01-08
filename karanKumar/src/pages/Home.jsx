@@ -1,13 +1,20 @@
+import { About } from "./About";
+import { Portfolio } from "./Portfolio";
+import { HomeComponent } from "../components/HomeComponent";
+import { useEffect } from "react";
 
-import { About } from './About';
-import { Portfolio } from './Portfolio';
-import { HomeComponent } from '../components/HomeComponent';
 export const Home = () => {
-    return(
-        <>
-        <HomeComponent />
-        <About />
-        <Portfolio />
-        </>
-    )
-}
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 40);
+  }, []);
+
+  return (
+    <>
+      <HomeComponent />
+      <About />
+      <Portfolio />
+    </>
+  );
+};

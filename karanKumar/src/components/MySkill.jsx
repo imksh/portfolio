@@ -1,20 +1,89 @@
-import { FaJava,FaReact } from "react-icons/fa6";
-import styles from "./MySkill.module.css"
+import { FaJava, FaReact } from "react-icons/fa6";
 import { SiSpring } from "react-icons/si";
-import { FaHtml5,FaJsSquare,FaCss3Alt,FaNodeJs,FaDatabase } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaJsSquare,
+  FaCss3Alt,
+  FaNodeJs,
+  FaDatabase,
+  FaGitAlt,
+  FaGithub,
+} from "react-icons/fa";
+import { TbBrandReactNative } from "react-icons/tb";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { motion } from "motion/react";
+import { SiMysql } from "react-icons/si";
+import { useState, useEffect } from "react";
+const data = [
+  { name: "Java", color: "#007396", icon: FaJava },
+  { name: "React", color: "#3596b2", icon: FaReact },
+  { name: "NodeJs", color: "#3596b2", icon: FaNodeJs },
+  { name: "ReactNative", color: "#3596b2", icon: TbBrandReactNative },
+  { name: "HTML", color: "#b2443a", icon: FaHtml5 },
+  { name: "Tailwind", color: "#0EA5E9", icon: RiTailwindCssFill },
+  { name: "CSS", color: "#4b98d0", icon: FaCss3Alt },
+  { name: "Nativewind", color: "#0EA5E9", icon: RiTailwindCssFill },
+  { name: "JavaScript", color: "yellow", icon: FaJsSquare },
+  { name: "DataBase", color: "gray", icon: FaDatabase },
+  { name: "MySQL", color: "#00758F", icon: SiMysql },
+  { name: "SpringBoot", color: "green", icon: SiSpring },
+  { name: "Git", color: "#F05033", icon: FaGitAlt },
+  { name: "GitHub", color: "#181717", icon: FaGithub },
+];
+
 export const MySkill = () => {
-    return(
-        <>
-        <div className={styles.skillContaineer}>
-            <div className={styles.skillDiv}><FaJava className={styles.iconImg} style={{color:"#007396"}}/><p>Java</p></div>
-            <div className={styles.skillDiv}><FaReact  className={styles.iconImg} style={{color:"#3596b2"}}/> <p>React</p> </div>
-            <div className={styles.skillDiv}><FaNodeJs  className={styles.iconImg} style={{color:"#3596b2"}}/> <p>NodeJs</p> </div>
-            <div className={styles.skillDiv}><FaHtml5  className={styles.iconImg} style={{color:"#b2443a"}}/> <p>HTML</p> </div>
-            <div className={styles.skillDiv}><FaCss3Alt  className={styles.iconImg} style={{color:"#4b98d0"}}/> <p>CSS</p> </div>
-            <div className={styles.skillDiv}><FaJsSquare  className={styles.iconImg}  style={{color:"yellow"}}/> <p>JavaScript</p> </div>
-            <div className={styles.skillDiv}><FaDatabase  className={styles.iconImg} style={{color:"gray"}}/> <p>DataBase</p> </div>
-            <div className={styles.skillDiv}><SiSpring  className={styles.iconImg} style={{color:"green"}}/> <p>SpringBoot</p> </div>
-        </div>
-        </>
-    )
-}
+  const [bounce, setBounce] = useState("");
+  const [shake, setShake] = useState("");
+  useEffect(() => {
+    setTimeout(() => {
+      setBounce("");
+    }, 1000);
+  }, [bounce]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShake("");
+    }, 1000);
+  }, [shake]);
+
+  return (
+    <>
+      <h2 className="text-center text-2xl mt-8 font-bold">My Skills</h2>
+      <div className="grid grid-cols-3 md:grid-cols-7 w-[90%] md:w-[85%] mx-auto gap-4 md:gap-8 my-16">
+        {data.map((item, indx) => {
+          const Icon = item.icon;
+          return (
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.9 }}
+              key={indx}
+              onTap={() => {
+                setBounce(indx);
+              }}
+              onMouseEnter={() => setShake(indx)}
+              className={`bg-[#353c43] aspect-square rounded-full flex flex-col justify-center items-center gap-2 hover:shadow-[0_0_30px_4px_var(--primary)]  cursor-pointer ${
+                bounce === indx
+                  ? "shadow-[inset_0_0_30px_4px_var(--primary)]"
+                  : ""
+              }`}
+            >
+              <motion.div
+                animate={
+                  bounce === indx
+                    ? { y: [0, -30, 0], rotate: "360deg" }
+                    : { y: 0 }
+                }
+                whileHover={{
+                  x: [-5, 0, 5, 0],
+                }}
+              >
+                <Icon className="" style={{ color: item.color }} size={40} />
+              </motion.div>
+              <p>{item.name}</p>
+            </motion.div>
+          );
+        })}
+      </div>
+    </>
+  );
+};

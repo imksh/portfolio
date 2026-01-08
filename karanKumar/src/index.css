@@ -1,50 +1,83 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-*::before, *::after {
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
 
 :root {
   --bgColor: #0f172a;
-  --headerColor : #0c162f;
-  --mainColor : #b620bd;
+  --headerColor: #0c162f;
+  --primary: #b620bd;
 }
-html{
+html {
   overflow-x: hidden;
 }
-body{
+body {
   background-color: var(--bgColor);
+  padding-top: 10dvh;
+  overflow-x: hidden;
+  scrollbar-width: none;
   color: white;
   scroll-behavior: smooth;
   scroll-snap-type: proximity;
-  overflow-x: hidden;
   font-family: "Inter", sans-serif;
 }
 
-button,select{
+.text-clip1 {
+  background: linear-gradient(
+    to right,
+    #c279a1,
+    #bc6da0,
+    #b562a0,
+    #ac56a0,
+    #a24ca2
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-gradient1 {
+  background: linear-gradient(
+    to right,
+    #c279a1,
+    #bc6da0,
+    #b562a0,
+    #ac56a0,
+    #a24ca2
+  );
+}
+
+button,
+select {
   cursor: pointer;
 }
-
-button:hover{
-  box-shadow: 0 0 10px 2px var(--mainColor);
+.customHover:hover {
+  box-shadow: 0 0 10px 2px var(--primary);
 }
 
-input:hover{
-  box-shadow: 0 0 10px 2px var(--mainColor);
+.customInnerHover:hover {
+  box-shadow: inset 0 0 20px 4px var(--primary);
 }
 
-select:hover{
-  box-shadow: 0 0 10px 2px var(--mainColor);
+input:hover {
+  box-shadow: 0 0 10px 2px var(--primary);
 }
 
-a{
+select:hover {
+  box-shadow: 0 0 10px 2px var(--primary);
+}
+
+a {
   text-decoration: none;
 }
 
-
-@media (max-width:500px) {
-  body{
-    font-size : 0.8rem;
+@media (max-width: 500px) {
+  body {
+    font-size: 0.8rem;
   }
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

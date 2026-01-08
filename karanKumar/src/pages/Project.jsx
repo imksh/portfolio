@@ -1,8 +1,8 @@
-import data from "../data/projects.json";
+import data from "../assets/data/projects.json";
 import { Card } from "../components/Card";
-import styles from "../components/Projects.module.css";
 import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
+import { IoIosSearch } from "react-icons/io";
 
 const Project = () => {
   const [input, setInput] = useState("");
@@ -23,9 +23,10 @@ const Project = () => {
 
   return (
     <>
-      <h1 className={styles.header}>All Projects</h1>
-      <div className={styles.inputDiv}>
-        <div className={styles.searchDiv}>
+      <h1 className="text-3xl text-center font-bold my-8">All Projects</h1>
+      <div className="flex justify-between w-[95%] md:w-[80%] mx-auto">
+        <div className="relative flex justify-center items-center w-auto">
+          <IoIosSearch className="absolute left-2" size={20} />
           <input
             type="text"
             placeholder="Search"
@@ -34,12 +35,18 @@ const Project = () => {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === "Search") {
-                e.target.blur(); 
+                e.target.blur();
               }
             }}
+            className="border py-2 md:pr-4 pl-8 rounded-2xl md:w-[400px]"
           />
         </div>
-        <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+
+        <select
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+          className="border p-2 w-20 md:w-auto  rounded md:rounded-2xl md:px-4"
+        >
           <option value="">Filter</option>
           <option value="react">React</option>
           <option value="native">React Native</option>
@@ -51,7 +58,7 @@ const Project = () => {
           <option value="sql">MySQl</option>
         </select>
       </div>
-      <div className={styles.projectContainer}>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-8 gap-16">
         {filteredData.map((curr, index) => (
           <Card key={index} {...curr} input={input} />
         ))}
