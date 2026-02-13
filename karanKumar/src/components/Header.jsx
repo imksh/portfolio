@@ -1,22 +1,43 @@
 import useUiStore from "../store/useUiStore";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import { motion, AnimatePresence } from "motion/react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Header = () => {
-  const { hide, showHeader, setShowHeader } = useUiStore();
+  const { hide, showHeader, setShowHeader, setShowHeaderMenu, showHeaderMenu } =
+    useUiStore();
   const navigate = useNavigate();
   const location = useLocation();
   const page = location.pathname;
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        setShowHeaderMenu(false);
+        setShowHeader(false);
+      } else {
+        setShowHeaderMenu(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [setShowHeader, setShowHeaderMenu]);
 
   if (hide) {
     return null;
   }
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-99 text-white flex flex-col px-4 md:px-16 min-h-[10dvh] justify-center bg-(--headerColor)`}
+      className={`fixed top-0 left-0 w-full z-99 text-white flex flex-col px-4 md:px-16 min-h-[10dvh] justify-center bg-(--headerColor) ${showHeaderMenu ? "translate-y-0" : "-translate-y-full"} transition duration-500`}
       onClick={(e) => e.stopPropagation()}
     >
       <div className="flex  justify-between  items-center h-[10dvh] z-99 bg-(--headerColor)">
@@ -39,7 +60,6 @@ export const Header = () => {
           >
             Home
           </motion.button>
-
           <motion.button
             whileTap={{ scale: 0.8 }}
             transition={{ duration: 0.8 }}
@@ -50,7 +70,6 @@ export const Header = () => {
           >
             About
           </motion.button>
-
           <motion.button
             whileTap={{ scale: 0.8 }}
             transition={{ duration: 0.8 }}
@@ -61,7 +80,6 @@ export const Header = () => {
           >
             Portfolio
           </motion.button>
-
           <motion.button
             whileTap={{ scale: 0.8 }}
             transition={{ duration: 0.8 }}
@@ -72,6 +90,21 @@ export const Header = () => {
           >
             Contact
           </motion.button>
+          |
+          <motion.a
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.1 }}
+            href="https://github.com/imksh"
+          >
+            <FaGithub className="text-xl"/>
+          </motion.a>
+          <motion.a
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.1 }}
+            href="https://www.linkedin.com/in/imksh3"
+          >
+            <FaLinkedin className="text-xl" />
+          </motion.a>
         </div>
 
         <div className="flex md:hidden">

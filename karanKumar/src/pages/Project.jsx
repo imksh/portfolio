@@ -1,7 +1,6 @@
 import data from "../assets/data/projects.json";
 import { Card } from "../components/Card";
 import { useState, useEffect } from "react";
-import { FaSearch } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 
 const Project = () => {

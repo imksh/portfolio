@@ -1,16 +1,8 @@
-import {
-  FaEnvelope,
-  FaArrowRight,
-  FaRegCopyright,
-  FaHeart,
-  FaInfinity,
-} from "react-icons/fa";
-
 import { motion } from "motion/react";
 import infinity from "../assets/animations/infinity.json";
 import Lottie from "lottie-react";
 import { NavLink } from "react-router-dom";
-import { SiImessage } from "react-icons/si";
+import { IoIosArrowForward } from "react-icons/io";
 
 export const Footer = () => {
   return (
@@ -29,57 +21,105 @@ export const Footer = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 1 }}
-            className="px-5 md:px-6 py-2.5 rounded-lg btn-gradient1 mt-4 md:mt-8 customHover flex gap-4 items-center justify-between"
+            className="px-5 md:px-6 py-2.5 rounded-lg btn-gradient1 mt-4 md:mt-8 customHover flex gap-2 items-center justify-between"
           >
-            Book a Call <FaArrowRight className="" />
+            Book a Call <IoIosArrowForward className="font-bold text-xl" />
           </motion.button>
         </a>
       </div>
-      <div className="flex w-[90%] md:w-[60%] mt-16 mx-auto justify-between items-center">
-        <div className="flex flex-col md:gap-4 gap-10">
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=karan03945@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex gap-2 md:gap-4"
-          >
-            <FaEnvelope className="w-7 h-7 md:w-12 md:h-12 text-(--primary)" />
+      {/* BOTTOM SECTION */}
+      <div className="w-full mt-16 pt-16 pb-6 px-6 md:px-20 text-white">
+        <div className="grid md:grid-cols-3 gap-12">
+          {/* LEFT - About */}
+          <div>
+            <h2 className="text-2xl font-bold text-yellow-500 mb-4 text-clip1">
+              Karan Kumar
+            </h2>
+            <p className="text-gray-300 leading-relaxed">
+              Building modern web experiences with performance, scalability and
+              clean architecture. Passionate about full-stack development and
+              crafting meaningful digital products.
+            </p>
 
-            <div className="flex flex-col relative">
-              <p className="text-(--primary) text-2xl md:my-1">Email</p>
-              <p className="absolute -bottom-5 md:static">
-                karan03945@gmail.com
-              </p>
-            </div>
-          </a>
-          <a href="sms:+917295038835" className="flex gap-2 md:gap-4">
-            <SiImessage className="w-7 h-7 md:w-12 md:h-12 text-(--primary)" />
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-full h-50 rounded-2xl overflow-hidden shadow-md mt-4"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3665.126467487355!2d77.46651307460527!3d23.27485397899774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDE2JzI5LjUiTiA3N8KwMjgnMDguNyJF!5e0!3m2!1sen!2sin!4v1770983332431!5m2!1sen!2sin"
+                className="w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </motion.div>
+          </div>
 
-            <div className="flex flex-col relative min-w-30">
-              <p className="text-(--primary) text-2xl md:my-1">Contact</p>
-              <p className="absolute -bottom-5 md:static">+91 7295038835</p>
-            </div>
-          </a>
+          {/* CENTER - Quick Links */}
+          <div>
+            <h2 className="text-2xl font-bold text-yellow-500 mb-4 text-clip1">
+              Quick Links
+            </h2>
+            <ul className="flex flex-col gap-2 text-gray-300">
+              <li>
+                <NavLink to="/" className="">
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about" className="">
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/portfolio" className="">
+                  Portfolio
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact" className="">
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+
+          {/* RIGHT - Contact */}
+          <div className="flex flex-col gap-1">
+            <h2 className="text-2xl font-bold text-yellow-500 mb-4 text-clip1 ">
+              Contact
+            </h2>
+            <a
+              href="https://maps.app.goo.gl/NvqFrqdQL7qd8eVm8"
+              className="text-gray-300"
+            >
+              📍 Ayodhya Nagar, Bhopal
+            </a>
+            <a href="tel:+917295038835" className="text-gray-300">
+              📞 +91 7295038835
+            </a>
+            <a href="mailto:karan03945@gmail.com" className="text-gray-300">
+              ✉️ karan03945@gmail.com
+            </a>
+            <motion.div whileTap={{ scale: 0.8 }} className="my-auto">
+              <Lottie
+                animationData={infinity}
+                loop
+                autoplay
+                className="w-40 h-40 cursor-pointer"
+              />
+            </motion.div>
+          </div>
         </div>
-        <div className="flex flex-col items-center justify-center text-center">
-          <ul className="flex flex-col items-center justify-center text-center gap-1">
-            <li className="text-2xl font-bold text-clip1 mb-2">Quick Links</li>
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">About</NavLink>
-            </li>
-            <li>
-              <NavLink to="/portfolio">Portfolio</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">Contact</NavLink>
-            </li>
-          </ul>
+
+        {/* Divider */}
+        <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400 text-sm">
+          © {new Date().getFullYear()} Karan Kumar | All rights reserved |
+          Crafted with ❤️
         </div>
       </div>
-      <div className="flex flex-col text-[12px] gap-2 my-4 md:text-[16px] items-center justify-center p-2 text-gray-500">
+      {/* <div className="flex flex-col text-[12px] gap-2 my-4 md:text-[16px] items-center justify-center p-2 text-gray-500">
         <motion.div whileTap={{ scale: 0.8 }}>
           <Lottie
             animationData={infinity}
@@ -89,7 +129,7 @@ export const Footer = () => {
           />
         </motion.div>
         <p>Crafted with ❤️ | ©️ IdioticMinds</p>
-      </div>
+      </div> */}
     </motion.div>
   );
 };

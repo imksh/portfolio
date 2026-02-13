@@ -3,7 +3,6 @@ import {
   FaGithub,
   FaLinkedin,
   FaInstagramSquare,
-  FaFileDownload,
   FaCode,
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
@@ -16,7 +15,7 @@ export const About = () => {
   const width = window.innerWidth;
   const [text, setText] = useState("");
   const [inc, setInc] = useState(true);
-  const word = "Web Developer & Java Developer";
+  const word = "Full Stack Developer";
   const index = useRef(-1);
 
   const timeRef = useRef(null);
@@ -27,7 +26,7 @@ export const About = () => {
         let updated;
         if (inc) {
           if (index.current >= word.length-1) {
-            updated = "Web Developer & Java Developer";
+            updated = "Full Stack Developer";
             index.current = text.length - 1;
             setInc(false);
           } else {

@@ -97,9 +97,11 @@ export const HomeComponent = () => {
         </motion.div>
       </div>
       <div className="flex flex-col items-center justify-center gap-2">
-        <p className="text-2xl md:text-3xl font-extrabold">Welcome To My</p>
+        <p className="text-2xl md:text-3xl font-extrabold">
+          Hi, I’m Karan Kumar
+        </p>
         <p className="text-3xl md:text-4xl font-extrabold text-clip1">
-          PortFolio Website
+          Full Stack Developer
         </p>
       </div>
       <motion.div className="w-fit">

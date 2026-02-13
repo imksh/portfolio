@@ -68,8 +68,12 @@ a {
   text-decoration: none;
 }
 
+
 @media (max-width: 500px) {
   body {
+    font-size: 0.8rem;
+  }
+  p{
     font-size: 0.8rem;
   }
 }

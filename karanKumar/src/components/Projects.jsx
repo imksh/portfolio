@@ -2,6 +2,7 @@ import data from "../assets/data/projects.json";
 import { Card } from "./Card";
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
+import { IoIosArrowForward } from "react-icons/io";
 
 export const Projects = () => {
   const navigate = useNavigate();
@@ -17,9 +18,9 @@ export const Projects = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 1 }}
-            className="px-8 py-4 rounded-lg btn-gradient1 customHover"
+            className="px-8 py-4 rounded-lg btn-gradient1 customHover flex items-center gap-2"
            onClick={() => navigate("/project")}>
-            View More Projects
+            View More Projects <IoIosArrowForward className="text-xl font-bold"/> 
           </motion.button>
         </div>
       )}

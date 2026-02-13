@@ -10,8 +10,11 @@ import Project from "./pages/Project";
 import { Routes, Route } from "react-router-dom";
 import Error404 from "./pages/Error404";
 import useUiStore from "./store/useUiStore";
+import ProjectPage from "./pages/ProjectPage";
+import useLenis from "./hooks/useLenis";
 
 function App() {
+  useLenis();
   const { setShowHeader } = useUiStore();
   return (
     <div
@@ -27,6 +30,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/project" element={<Project />} />
+        <Route path="/project/:slug" element={<ProjectPage />} />
         <Route path="/*" element={<Error404 />} />
       </Routes>
       <Footer />

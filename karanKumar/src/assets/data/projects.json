@@ -1,93 +1,329 @@
 [
   {
+  "title": "Shri Baglamukhi – Official Puja & Anushthan Website",
+  "slug": "shri-baglamukhi",
+  "excerpt": "Spiritual service platform for online puja booking and temple information.",
+  "description": "Shri Baglamukhi is an official spiritual service website built to provide authentic information about Baglamukhi Puja, Anushthan, and temple services. The platform allows users to explore different puja offerings, read detailed descriptions, and connect directly for bookings and guidance. The project focuses on SEO optimization, performance, and scalable backend integration.",
+  "tech": ["React", "Node.js", "Express", "MongoDB", "Netlify", "Render"],
+  "category": "Full Stack Web Application",
+  "year": "2026",
+  "status": "active",
+  "features": [
+    "Dynamic Puja pages with SEO-friendly slugs",
+    "XML Sitemap & robots.txt integration",
+    "Google Search Console integration",
+    "Responsive mobile-first design",
+    "Custom domain with SSL",
+    "Admin-controlled content management (backend-based)"
+  ],
+  "img": "/images/shri-baglamukhi/1.png",
+  "live": "https://shribaglamukhi.com",
+  "github": "private",
+  "images":["/images/shri-baglamukhi/2.png","/images/shri-baglamukhi/3.jpeg","/images/shri-baglamukhi/4.jpeg","/images/shri-baglamukhi/5.jpeg","/images/shri-baglamukhi/6.png","/images/shri-baglamukhi/7.png"],
+  "challenges": "Major challenges included handling domain migration (.com and .in), fixing canonical URL issues, resolving duplicate indexing problems, setting up sitemap with backend integration, and managing DNS propagation with SSL configuration. Optimizing the site for SEO while maintaining performance on free hosting tiers also required careful planning.",
+  "learnings": "This project strengthened my understanding of real-world deployment workflows, DNS configuration, SSL management, canonical tags, sitemap generation, and Google indexing behavior. I gained hands-on experience in full-stack deployment, production debugging, and SEO optimization for live client projects."
+},
+  {
     "title": "Sakhi",
-    "desc": "Sakhi is a real-time chatting application with features such as one-to-one messaging, push notification, online status, and secure authentication.",
-    "tech": "React, JavaScript, Node.js, MongoDB",
-    "img": "/images/sakhi.png",
-    "link": "https://imksh-sakhi.netlify.app/"
+    "slug":"sakhi",
+    "excerpt": "Real-time chat app with authentication and online presence.",
+    "description": "Sakhi is a full-stack real-time chatting application built with React and Node.js. It supports secure authentication, one-to-one messaging, online status tracking, and push notifications. The backend is powered by MongoDB with JWT-based authentication and optimized socket communication for real-time performance.",
+    "tech": ["React", "Node.js", "MongoDB", "JWT", "Socket.io"],
+    "category": "Full Stack Application",
+    "year": "2024",
+    "status": "active",
+    "features": [
+      "Real-time one-to-one messaging",
+      "Online/offline status",
+      "Push notifications",
+      "Secure JWT authentication"
+    ],
+    "img": "/images/sakhi/1.png",
+    "live": "https://imksh-sakhi.netlify.app/",
+    "github": "https://github.com/imksh/sakhi",
+    "images":["/images/sakhi/2.png","/images/sakhi/3.png","/images/sakhi/4.png"],
+    "challenges":"Through Sakhi, I gained strong hands-on experience with real-time application architecture. I learned how WebSocket-based communication works internally and how to integrate it effectively with REST APIs. The project strengthened my understanding of JWT-based authentication, protected routes, and secure data flow between frontend and backend. It also improved my skills in state management, asynchronous event handling, and designing scalable full-stack applications.",
+    "learnings":"One of the main challenges in building Sakhi was implementing reliable real-time communication while ensuring secure authentication. Managing socket connections efficiently without memory leaks or duplicate listeners required careful event handling. Designing a clean and scalable backend structure using MongoDB, while maintaining user-specific message privacy, also required thoughtful schema planning. Additionally, synchronizing online/offline user status in real time without performance degradation was technically demanding."
   },
   {
     "title": "TrueRate",
-    "desc": "TrueRate is a simple Currency Converter as a weekend side project. You can convert between multiple currencies and see clean, instant results.",
-    "tech": "React , Tailwind, API",
-    "img": "/images/currency.png",
-    "link": "https://imksh-pages.netlify.app/currency-converter"
-  },
-  {
-    "title": "Wonders of World",
-    "desc": "This is a interactive “Wonders of the World” showcase that brings iconic landmarks to life using a cool slice animation effect. Each wonder animates in with motion and reveals a bit of its story — a small way to make learning visual and fun",
-    "tech": "React , Tailwind",
-    "img": "/images/wonders.png",
-    "link": "https://imksh-pages.netlify.app/wonders"
+    "slug":"true-rate",
+    "excerpt": "Minimal currency converter with instant API-based conversion.",
+    "description": "TrueRate is a lightweight currency converter built as a weekend side project. It integrates with a live currency API to fetch real-time exchange rates and provides a clean, responsive UI for seamless currency conversion.",
+    "tech": ["React", "Tailwind", "REST API"],
+    "category": "Frontend Project",
+    "year": "2024",
+    "status": "active",
+    "features": [
+      "Live currency API integration",
+      "Multiple currency support",
+      "Instant conversion results",
+      "Responsive UI"
+    ],
+    "img": "/images/true-rate/1.png",
+    "live": "https://imksh-pages.netlify.app/currency-converter",
+    "github": "https://github.com/imksh/pages/blob/main/src/pages/CurrencyConverter.jsx",
+    "images":["/images/true-rate/2.png","/images/true-rate/3.png","/images/true-rate/4.png"],
+    "challenges":"Handling asynchronous API calls and managing potential API failures or latency issues was a major challenge. Ensuring accurate currency formatting and instant UI updates without blocking user interaction required efficient state handling and error management.",
+    "learnings":"This project improved my understanding of API integration and asynchronous programming. I learned how to manage external data sources, handle loading and error states properly, and ensure accurate real-time data presentation."
   },
   {
     "title": "CricFair",
-    "desc": "CricFair is an offline cricket scoring and team management app designed. The app enables real-time score tracking, predictive player selection for fair play, and live overlay integration for YouTube",
-    "tech": "React Native, Expo, TypeScript, Node.js",
-    "img": "/images/cricfair.png",
-    "link": "https://drive.google.com/drive/folders/1tNqfwN3Plb7wbqBZCrl7i03sOCfx1p4Z?usp=sharing"
+    "slug":"cricfair",
+    "excerpt": "Offline cricket scoring and team management app.",
+    "description": "CricFair is a React Native-based cricket scoring and team management app designed for local matches. It enables offline scoring, predictive player selection for fair play, and integrates with YouTube overlays for live score display during streaming.",
+    "tech": ["React Native", "Expo", "TypeScript", "Node.js"],
+    "category": "Mobile Application",
+    "year": "2025",
+    "status": "active",
+    "features": [
+      "Offline match scoring",
+      "Team and player management",
+      "Predictive fair-play selection",
+      "Live overlay integration"
+    ],
+    "img": "/images/cricfair/1.png",
+    "live": "https://drive.google.com/drive/folders/1tNqfwN3Plb7wbqBZCrl7i03sOCfx1p4Z?usp=sharing",
+    "github": "https://github.com/imksh/CricFair",
+    "images":["/images/cricfair/2.jpg","/images/cricfair/3.jpg","/images/cricfair/4.jpg"],
+    "challenges":"Designing an offline-first architecture while maintaining accurate score tracking was a significant challenge. Managing complex match state transitions and player logic required structured state management. Integrating live overlay support for streaming platforms added additional technical complexity.",
+    "learnings":"This project strengthened my knowledge of offline-first architecture and mobile state management using React Native. I learned how to manage complex match logic, maintain consistency in offline mode, and design scalable mobile application structures."
   },
   {
-    "title": "KaranSharmaXP",
-    "desc": "Built my personal portfolio inspired by the classic Windows XP interface — icons, windows, interactions — all recreated using modern web tech.",
-    "tech": "React",
-    "img": "/images/xp.png",
-    "link": "https://imksh-xp.netlify.app/"
-  },
+  "title": "KaranSharmaXP",
+  "slug": "karansharma-xp",
+  "excerpt": "Windows XP-inspired interactive portfolio.",
+  "description": "KaranSharmaXP is a nostalgic, Windows XP-inspired portfolio experience that recreates the classic desktop environment in the browser. It includes draggable windows, icon-based navigation, and interactive UI elements built entirely using modern React architecture.",
+  "tech": ["React"],
+  "category": "Creative UI / Portfolio",
+  "year": "2024",
+  "status": "active",
+  "features": [
+    "Draggable window system",
+    "Desktop-style UI",
+    "Icon-based navigation",
+    "Fully responsive layout"
+  ],
+  "img": "/images/karansharma-xp/1.png",
+  "live": "https://imksh-xp.netlify.app/",
+  "github": "https://github.com/imksh/portfolio/tree/main/karanSharmaXP",
+    "images":["/images/karansharma-xp/2.png","/images/karansharma-xp/3.png","/images/karansharma-xp/4.png"],
+    "challenges":"Recreating a desktop-like window management system inside the browser was technically challenging. Implementing draggable windows, dynamic z-index control, and window focus handling required advanced state coordination. Ensuring responsiveness while maintaining the authenticity of a Windows XP-style UI added another layer of complexity.",
+    "learnings":"This project enhanced my ability to manage complex UI states and dynamic layouts. I learned how to implement draggable components, manage z-index layering, and recreate desktop-like interactions inside a modern web application using React."
+},
+  
   {
-    "title": "Threadly",
-    "desc": "Threadly is a minimal social platform where users can sign up, create posts, explore public content, and connect with others.",
-    "tech": "React, Spring Boot, MongoDB",
-    "img": "/images/threadly.png",
-    "link": "https://imksh-threadly.netlify.app/"
-  },
+  "title": "Wonders of World",
+  "slug": "wonders-of-world",
+  "excerpt": "Interactive animated showcase of world wonders.",
+  "description": "Wonders of the World is an interactive visual showcase that brings iconic global landmarks to life using dynamic slice-based animations. Each section animates smoothly on entry and reveals contextual information about the wonder, blending motion design with educational storytelling.",
+  "tech": ["React", "Tailwind CSS"],
+  "category": "Frontend Experience",
+  "year": "2024",
+  "status": "active",
+  "features": [
+    "Slice animation effect",
+    "Scroll-triggered motion",
+    "Responsive design",
+    "Interactive storytelling layout"
+  ],
+  "img": "/images/wonders-of-world/1.png",
+  "live": "https://imksh-pages.netlify.app/wonders",
+  "github": "https://github.com/imksh/pages/blob/main/src/pages/Wonders.jsx",
+    "images":["/images/wonders-of-world/2.png","/images/wonders-of-world/3.png","/images/wonders-of-world/4.png"],
+    "challenges":"Creating smooth slice-based animations that synchronize correctly with content reveal required careful timing and animation logic. Maintaining performance on lower-end devices while using visually rich transitions was another challenge. Designing responsive animated layouts without breaking visual consistency demanded thoughtful UI structuring.",
+    "learnings":"I learned how to combine animation techniques with storytelling to enhance user engagement. This project improved my understanding of timing-based animations, performance optimization for motion-heavy components, and responsive animation design."
+},
   {
     "title": "CropMateAI",
-    "desc": "CropMateAI is an AI-powered system that predicts the optimal harvest time for crops by analyzing climatic and soil data.",
-    "tech": "React,Python and Scikit-learn,Flask",
-    "img": "/images/cropmate.png",
-    "link": "https://cropmateai.netlify.app/"
+    "slug":"cropmate-ai",
+    "excerpt": "AI-powered crop harvest prediction system.",
+    "description": "CropMateAI is an AI-based system that predicts optimal crop harvest time by analyzing climatic and soil conditions. Built using Python and Scikit-learn for model training, and Flask for backend API integration, the system helps farmers make data-driven decisions.",
+    "tech": ["React", "Python", "Flask", "Scikit-learn"],
+    "category": "AI / Machine Learning",
+    "year": "2025",
+    "status": "inactive",
+    "features": [
+      "Machine learning prediction model",
+      "Climate & soil data analysis",
+      "REST API integration",
+      "Interactive frontend dashboard"
+    ],
+    "img": "/images/cropmate-ai/1.png",
+    "live": "https://cropmateai.netlify.app/",
+    "github": "https://github.com/imksh/CropMateAI",
+    "challenges":"Preparing and cleaning the dataset before training the machine learning model required careful preprocessing. Selecting an appropriate algorithm and tuning it for accurate predictions was technically demanding. Integrating the Python ML backend with a React frontend through a Flask API while managing response timing was another key challenge.",
+    "learnings":"Working on this AI-based system deepened my understanding of data preprocessing, model training, and backend integration. I learned how to bridge machine learning models with web applications and handle real-world prediction workflows."
   },
+{
+  "title": "Do You Love Me? – Interactive Playful UI Experiment",
+  "slug": "love-me",
+  "excerpt": "A playful interactive UI where the ‘No’ button refuses to be clicked.",
+  "description": "‘Do You Love Me?’ is a lighthearted interactive UI experiment designed to demonstrate creative event handling and dynamic positioning in the browser. The interface presents two options — Yes and No — but when users attempt to click the No button, it dynamically repositions itself, creating a playful and engaging experience. The project focuses on DOM manipulation, mouse event tracking, collision logic, and responsive button movement behavior.",
+  "tech": ["HTML", "CSS", "JavaScript"],
+  "category": "Creative UI Interaction",
+  "year": "2025",
+  "status": "active",
+  "features": [
+    "Mouse position tracking",
+    "Dynamic button repositioning",
+    "Randomized movement algorithm",
+    "Viewport boundary detection",
+    "Responsive design support"
+  ],
+  "img": "/images/love-me/1.png",
+  "live": "https://imksh-pages.netlify.app/loveMe",
+  "github": "https://github.com/imksh/pages/blob/main/src/pages/LoveMe.jsx",
+  "challenges": "The main challenge was preventing the 'No' button from moving outside the viewport while ensuring smooth repositioning without visual glitches. Managing mouse proximity detection and preventing accidental overlaps required careful coordinate calculations.",
+  "learnings": "This project helped strengthen my understanding of DOM manipulation, event listeners, viewport calculations, and creative UI behavior design. It reinforced how small interactive elements can significantly enhance user engagement."
+},
   {
-    "title": "PhotoBooth",
-    "desc": "Built a small project using React — a web-based photo booth that: Captures photos from the camera, Lets users apply filters, Creates a collage OR saves a single photo, Allows downloading the final image.",
-    "tech": "React",
-    "img": "/images/camera.png",
-    "link": "https://imksh-pages.netlify.app/camera"
-  },
+  "title": "Threadly",
+  "slug": "threadly",
+  "excerpt": "Minimal social platform for creating and exploring posts.",
+  "description": "Threadly is a full-stack social platform where users can sign up, create posts, explore public content, and interact with others. The backend is built using Spring Boot and MongoDB, while the frontend uses React for a smooth and responsive user experience.",
+  "tech": ["React", "Spring Boot", "MongoDB"],
+  "category": "Full Stack Application",
+  "year": "2025",
+  "status": "inactive",
+  "features": [
+    "User authentication",
+    "Create & explore posts",
+    "Backend API with Spring Boot",
+    "MongoDB database integration"
+  ],
+  "img": "/images/threadly/1.png",
+  "live": "https://imksh-threadly.netlify.app/",
+  "github": "https://github.com/imksh/Threadly-Backend",
+    "challenges":"Designing a clean API architecture using Spring Boot while integrating it seamlessly with a React frontend was a key challenge. Managing authentication securely and structuring MongoDB schemas effectively required careful backend planning. Keeping frontend and backend data models synchronized also required disciplined development.",
+    "learnings":"Through Threadly, I strengthened my full-stack development skills. I learned how to design RESTful APIs using Spring Boot, structure MongoDB schemas effectively, and integrate frontend and backend systems while maintaining clean data flow and authentication handling."
+},
+  
   {
-    "title": "PortFolio Website",
-    "desc": "Portfolio Website showcasing my skills, projects, and professional journey. Designed to highlight creativity, experience, and passion for building impactful solutions.",
-    "tech": "React, Css",
-    "img": "/images/portfolio.png",
-    "link": "https://imksh-portfolio.netlify.app/"
-  },
+  "title": "PhotoBooth",
+  "slug": "photobooth",
+  "excerpt": "Web-based camera app with filters and collage creation.",
+  "description": "PhotoBooth is a web-based camera application built using React that allows users to capture photos directly from their device camera. Users can apply visual filters, create collages, preview their compositions, and download final images — all in the browser without external tools.",
+  "tech": ["React", "HTML5 Camera API", "Canvas API"],
+  "category": "Frontend Application",
+  "year": "2024",
+  "status": "active",
+  "features": [
+    "Real-time camera capture",
+    "Custom filter effects",
+    "Collage creation mode",
+    "Downloadable final image",
+    "Responsive design"
+  ],
+  "img": "/images/photobooth/1.png",
+  "live": "https://imksh-pages.netlify.app/camera",
+  "github": "https://github.com/imksh/pages/blob/main/src/pages/Camera.jsx",
+    "challenges":"Accessing and managing camera permissions across browsers was one of the main challenges. Applying real-time filters using the Canvas API while maintaining performance required careful optimization. Generating downloadable images and handling collage composition logic without quality loss also demanded precise image manipulation handling.",
+    "learnings":"I gained practical experience working with browser APIs, particularly the Camera API and Canvas API. The project improved my understanding of image manipulation, real-time rendering, and handling media permissions securely in web applications."
+},
   {
-    "title": "Drawing App",
-    "desc": "Drawing App is a fun and easy tool for creating digital art. Sketch, doodle, or design with intuitive tools—perfect for artists of all levels!",
-    "tech": "HTML, CSS, JavaScript",
-    "img": "/images/drawing.png",
-    "link": "https://imksh.github.io/Drawing-App/"
-  },
+  "title": "Portfolio Website",
+  "slug": "portfolio-website",
+  "excerpt": "Modern personal portfolio showcasing projects and skills.",
+  "description": "A modern and responsive portfolio website built to showcase my technical skills, featured projects, and professional journey. The design focuses on clean layout, smooth user experience, and structured content presentation to effectively communicate expertise and creativity.",
+  "tech": ["React", "CSS"],
+  "category": "Personal Branding",
+  "year": "2024",
+  "status": "active",
+  "features": [
+    "Responsive design",
+    "Project showcase section",
+    "Dynamic routing",
+    "Clean UI with modern styling"
+  ],
+  "img": "/images/portfolio-website/1.png",
+  "live": "https://imksh3.netlify.app/",
+  "github": "https://github.com/imksh/portfolio/tree/main/karanKumar",
+    "challenges":"Structuring the application to remain scalable while maintaining consistent design patterns was a major focus. Ensuring performance optimization for faster load times and creating a clean visual hierarchy to present projects effectively required deliberate UI/UX decisions.",
+    "learnings":"Building my portfolio improved my UI/UX thinking and design consistency. I learned how to structure content for clarity, optimize performance, and present projects strategically to communicate technical depth effectively"
+},
   {
-    "title": "Paint Tool",
-    "desc": "Played around with the canvas to build a simple online paint tool that works smoothly across screen sizes. Mostly just exploring how drawing, events, and responsiveness behave in the browser.",
-    "tech": "React",
-    "img": "/images/paint.png",
-    "link": "https://imksh-pages.netlify.app/paint"
-  },
+  "title": "Drawing App",
+  "slug": "drawing-app",
+  "excerpt": "Interactive browser-based digital drawing tool.",
+  "description": "Drawing App is a browser-based digital art tool built using vanilla JavaScript and the HTML Canvas API. It allows users to sketch, adjust brush sizes, choose colors, and create digital artwork interactively. The project explores canvas rendering, mouse event handling, and responsive layout design.",
+  "tech": ["HTML", "CSS", "JavaScript", "Canvas API"],
+  "category": "Frontend / Canvas Project",
+  "year": "2023",
+  "status": "inactive",
+  "features": [
+    "Brush size customization",
+    "Color picker",
+    "Real-time drawing",
+    "Responsive canvas layout"
+  ],
+  "img": "/images/drawing-app/1.png",
+  "live": "https://imksh.github.io/Drawing-App/",
+  "github": "private",
+    "challenges":"One of the main challenges was implementing smooth drawing behavior while maintaining performance across different screen sizes. Handling mouse and touch events consistently required careful event management, and resizing the canvas without losing existing drawings required thoughtful state handling. Ensuring responsive behavior while preserving drawing accuracy was also a key technical focus.",
+    "learnings":"Through this project, I gained a deeper understanding of the HTML Canvas API and how rendering works in the browser. I learned how to manage drawing logic efficiently, handle user interaction events properly, and maintain performance during continuous rendering operations. It strengthened my understanding of event handling and responsive UI behavior."
+},
   {
-    "title": "Tic-Tac-Toe",
-    "desc": "Tic-Tac-Toe is a fun and simple 2-player game. Take turns placing Xs and Os on a 3×3 grid. The first to align three in a row wins. Play, compete, and challenge your strategy!",
-    "tech": "HTML, CSS, JavaScript",
-    "img": "/images/tic-tac-toe.png",
-    "link": "https://imksh.github.io/Tic-Tac-Toe/"
-  },
+  "title": "Paint Tool",
+  "slug": "paint-tool",
+  "excerpt": "Responsive browser-based paint tool built with canvas.",
+  "description": "Paint Tool is a lightweight drawing application built using React and the HTML Canvas API. It enables users to draw freely on the screen with responsive behavior across different device sizes. The project focuses on understanding canvas rendering, event handling, and dynamic UI responsiveness in modern web applications.",
+  "tech": ["React", "Canvas API"],
+  "category": "Frontend / Canvas Project",
+  "year": "2024",
+  "status": "active",
+  "features": [
+    "Freehand drawing",
+    "Responsive canvas resizing",
+    "Mouse & touch event handling",
+    "Smooth rendering performance"
+  ],
+  "img": "/images/paint-tool/1.png",
+  "live": "https://imksh-pages.netlify.app/paint",
+  "github": "https://github.com/imksh/pages/blob/main/src/pages/Paint.jsx",
+  "challenges":"One of the main challenges was implementing smooth drawing behavior while maintaining performance across different screen sizes. Handling mouse and touch events consistently required careful event management, and resizing the canvas without losing existing drawings required thoughtful state handling. Ensuring responsive behavior while preserving drawing accuracy was also a key technical focus.",
+  "learnings":"Through this project, I gained a deeper understanding of the HTML Canvas API and how rendering works in the browser. I learned how to manage drawing logic efficiently, handle user interaction events properly, and maintain performance during continuous rendering operations. It strengthened my understanding of event handling and responsive UI behavior."
+},
   {
-    "title": "Todo App",
-    "desc": "To-Do App helps you stay organized and productive. Easily add, edit, and manage your tasks—all in one place. Stay on track and never miss a deadline!",
-    "tech": "React, CSS",
-    "img": "/images/todo.png",
-    "link": "https://idioticminds-todo.netlify.app/"
-  }
+  "title": "Tic-Tac-Toe",
+  "slug": "tic-tac-toe",
+  "excerpt": "Classic 2-player game built with vanilla JavaScript.",
+  "description": "Tic-Tac-Toe is a browser-based 2-player strategy game built using HTML, CSS, and JavaScript. It demonstrates DOM manipulation, state management logic, and event-driven programming without external frameworks.",
+  "tech": ["HTML", "CSS", "JavaScript"],
+  "category": "JavaScript Game",
+  "year": "2023",
+  "status": "active",
+  "features": [
+    "Two-player turn logic",
+    "Win detection algorithm",
+    "Game reset functionality",
+    "Responsive UI layout"
+  ],
+  "img": "/images/tic-tac-toe/1.png",
+  "live": "https://imksh.github.io/Tic-Tac-Toe/",
+  "github": "https://github.com/imksh/Tic-Tac-Toe",
+    "challenges":"The primary challenge was designing a clean and reliable win-detection algorithm while preventing invalid moves. Managing game state transitions correctly without introducing unnecessary complexity was important, especially since the app was built using vanilla JavaScript without a framework. Keeping the logic simple yet maintainable required careful structuring.",
+    "learnings":"This project improved my understanding of state management and logical problem solving using vanilla JavaScript. I learned how to structure clean game logic, implement win-detection algorithms, and manage DOM updates efficiently without relying on frameworks."
+},
+  {
+  "title": "Todo App",
+  "slug": "todo-app",
+  "excerpt": "Task management app with CRUD functionality.",
+  "description": "Todo App is a simple task management application built using React. It allows users to create, edit, delete, and manage tasks efficiently. The project demonstrates component-based architecture, state management, and user interaction handling in React.",
+  "tech": ["React", "CSS"],
+  "category": "Frontend Application",
+  "year": "2024",
+  "status": "inactive",
+  "features": [
+    "Add / Edit / Delete tasks",
+    "State-based task management",
+    "Responsive layout",
+    "Clean UI design"
+  ],
+  "img": "/images/todo-app/1.png",
+  "live": "https://idioticminds-todo.netlify.app/",
+  "github": "private",
+    "challenges":"The challenge was managing component state efficiently while keeping the UI responsive and scalable. Handling controlled inputs and ensuring consistent updates without unnecessary re-renders required proper React state management practices. Structuring the application in a way that allows easy future extension was also a consideration",
+    "learnings":"Building this app reinforced core React fundamentals such as component architecture, state management, and controlled inputs. I learned how to design reusable components and structure applications in a scalable way while keeping the UI responsive and clean."
+}
 ]
