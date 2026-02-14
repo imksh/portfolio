@@ -9,22 +9,24 @@ const Project = () => {
   const [filteredData, setFilteredData] = useState(data);
   useEffect(() => {
     const newData = data.filter((item) =>
-      item.title.toLowerCase().includes(input.toLowerCase())
+      item.title.toLowerCase().includes(input.toLowerCase()),
     );
     setFilteredData(newData);
 
     if (filter === "") return;
     const filtered = data.filter((item) =>
-      item.tech.toLowerCase().includes(filter)
+      item.tech.toLowerCase().includes(filter),
     );
     setFilteredData(filtered);
   }, [input, filter]);
 
   return (
     <>
-      <h1 className="text-3xl text-center font-bold my-8">All Projects</h1>
-      <div className="flex justify-between w-[95%] md:w-[80%] mx-auto">
-        <div className="relative flex justify-center items-center w-auto">
+      <h1 className="text-3xl text-center font-bold my-8">
+        All Projects <span className="text-sm">({data.length})</span>
+      </h1>
+      <div className="flex justify-between w-[90%] md:w-[80%] mx-auto">
+        <div className="relative flex justify-center items-center ">
           <IoIosSearch className="absolute left-2" size={20} />
           <input
             type="text"
@@ -37,7 +39,7 @@ const Project = () => {
                 e.target.blur();
               }
             }}
-            className="border py-2 md:pr-4 pl-8 rounded-2xl md:w-[400px]"
+            className="border py-2 md:pr-4 pl-8 rounded-2xl w-[200px] md:w-[400px]"
           />
         </div>
 

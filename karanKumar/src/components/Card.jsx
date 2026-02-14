@@ -30,7 +30,7 @@ export const Card = (props) => {
         to={`/project/${slug}`}
         className={`bg-[#1a1d3c] p-4 rounded-2xl ${
           width > 500 ? "customHover" : "customInnerHover"
-        } flex flex-col h-full`}
+        } flex flex-col h-full pb-8`}
       >
         <div className="w-full object-contain min-h-[40%]">
           <img src={img} alt={title} className="w-full object-contain" />
@@ -58,7 +58,7 @@ export const Card = (props) => {
             </div>
           </div>
 
-          <Link to={`/project/${slug}`}>
+          {/* <Link to={`/project/${slug}`}>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 1 }}
@@ -66,7 +66,7 @@ export const Card = (props) => {
             >
               Open
             </motion.button>
-          </Link>
+          </Link> */}
         </div>
       </Link>
     </motion.div>

@@ -222,7 +222,7 @@ export const About = () => {
         </div>
       </motion.div>
 
-      <div className="p-[5%] grid grid-cols-2 md:grid-cols-4 mx-auto gap-4">
+      <div className="p-[5%] grid grid-cols-2 md:grid-cols-4 mx-auto gap-4 mb-16">
         <h2 className="col-span-2 md:col-span-4 mb-16 font-bold text-2xl text-center md:text-3xl">
           Core Expertise
         </h2>

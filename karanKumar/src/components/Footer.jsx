@@ -120,7 +120,7 @@ export const Footer = () => {
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                href="https://www.instagram.com/bagla_devi_?igsh=bWY1eHJpcm9jczJz"
+                href="https://www.instagram.com/imksh.3"
                 target="_blank"
                 className="w-12 h-12 rounded-2xl overflow-hidden"
               >

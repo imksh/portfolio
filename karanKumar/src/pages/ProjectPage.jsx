@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import projects from "../assets/data/projects.json";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { motion } from "motion/react";
 import Lottie from "lottie-react";
 import Challenge from "../assets/animations/assignmets.json";
@@ -9,9 +9,10 @@ import Learning from "../assets/animations/notes.json";
 
 const ProjectPage = () => {
   const { slug } = useParams();
+  const location = useLocation().pathname;
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [location]);
 
   const project = projects.find((item) => item.slug === slug);
 
@@ -44,10 +45,10 @@ const ProjectPage = () => {
             <a
               href={project.live}
               target={project.live === "active" ? "_blank" : ""}
-              className={`flex items-center gap-2 ${project.status === "active" ? "bg-gradient-to-r from-purple-500 to-pink-500 cursor-pointer" : "bg-slate-300 cursor-not-allowed"} px-6 py-3 rounded-lg font-semibold hover:scale-105 transition`}
+              className={`flex items-center gap-2 ${project.status === "active" ? "bg-linear-to-r from-purple-500 to-pink-500 cursor-pointer" : "bg-slate-300 cursor-not-allowed"} px-6 py-3 rounded-lg font-semibold hover:scale-105 transition`}
             >
               <FaExternalLinkAlt />{" "}
-              {project.status === "active" ? "Live Demo" : "Paused"}
+              {project.status === "active" ? "Live" : "Paused"}
             </a>
 
             <a
