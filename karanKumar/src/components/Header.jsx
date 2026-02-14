@@ -46,7 +46,7 @@ export const Header = () => {
           onClick={() => navigate("/")}
           className="flex items-center gap-2.5 cursor-pointer"
         >
-          <p className="text-xl md:text-3xl font-bold ">Karan Kumar</p>
+          <p className="!text-xl md:text-3xl font-bold ">Karan Kumar</p>
         </motion.button>
 
         <div className="hidden md:flex list-none gap-4  items-center  my-auto">
@@ -96,7 +96,7 @@ export const Header = () => {
             whileHover={{ scale: 1.1 }}
             href="https://github.com/imksh"
           >
-            <FaGithub className="text-xl"/>
+            <FaGithub className="text-xl" />
           </motion.a>
           <motion.a
             whileTap={{ scale: 0.9 }}
@@ -143,7 +143,7 @@ export const Header = () => {
                 page === "/" ? "text-(--primary)" : ""
               }`}
             >
-              Home
+              <p>Home</p>
             </motion.button>
 
             <motion.button
@@ -157,7 +157,7 @@ export const Header = () => {
                 page === "/about" ? "text-(--primary)" : ""
               }`}
             >
-              About
+              <p>About</p>
             </motion.button>
 
             <motion.button
@@ -171,7 +171,7 @@ export const Header = () => {
                 page === "/portfolio" ? "text-(--primary)" : ""
               }`}
             >
-              Portfolio
+              <p>Portfolio</p>
             </motion.button>
 
             <motion.button
@@ -185,8 +185,22 @@ export const Header = () => {
                 page === "/contact" ? "text-(--primary)" : ""
               }`}
             >
-              Contact
+              <p>Contact</p>
             </motion.button>
+            <div className="flex fap-4 w-full gap-4 pt-2">
+              <motion.a
+                whileTap={{ scale: 0.9 }}
+                href="https://github.com/imksh"
+              >
+                <FaGithub className="text-2xl" />
+              </motion.a>
+              <motion.a
+                whileTap={{ scale: 0.9 }}
+                href="https://www.linkedin.com/in/imksh3"
+              >
+                <FaLinkedin className="text-2xl" />
+              </motion.a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

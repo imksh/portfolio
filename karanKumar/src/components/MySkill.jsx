@@ -14,6 +14,8 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "motion/react";
 import { SiMysql } from "react-icons/si";
 import { useState, useEffect } from "react";
+import { SiMongodb } from "react-icons/si";
+
 const data = [
   { name: "Java", color: "#007396", icon: FaJava },
   { name: "React", color: "#3596b2", icon: FaReact },
@@ -26,7 +28,7 @@ const data = [
   { name: "JavaScript", color: "yellow", icon: FaJsSquare },
   { name: "DataBase", color: "gray", icon: FaDatabase },
   { name: "MySQL", color: "#00758F", icon: SiMysql },
-  { name: "SpringBoot", color: "green", icon: SiSpring },
+  { name: "MongoDB", color: "green", icon: SiMongodb },
   { name: "Git", color: "#F05033", icon: FaGitAlt },
   { name: "GitHub", color: "#181717", icon: FaGithub },
 ];
@@ -48,7 +50,7 @@ export const MySkill = () => {
 
   return (
     <>
-      <h2 className="text-center text-2xl mt-8 font-bold">My Skills</h2>
+      <h2 className="text-center text-2xl mt-8 font-bold">Technology Stack</h2>
       <div className="grid grid-cols-3 md:grid-cols-7 w-[90%] md:w-[85%] mx-auto gap-4 md:gap-8 my-16">
         {data.map((item, indx) => {
           const Icon = item.icon;

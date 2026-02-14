@@ -35,7 +35,7 @@ export const Contact = () => {
           name="name"
           placeholder="Name"
           required
-          className=" border-[0.5px] w-full p-3 rounded-lg my-2"
+          className=" border-[0.5px] w-full p-3 rounded-lg my-2 outline-none"
         />
         <ValidationError prefix="Name" field="name" errors={state.errors} />
         <input
@@ -44,7 +44,7 @@ export const Contact = () => {
           name="email"
           placeholder="Your Email"
           required
-          className=" border-[0.5px] w-full p-3 rounded-lg my-2"
+          className=" border-[0.5px] w-full p-3 rounded-lg my-2 outline-none"
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
 
@@ -54,7 +54,7 @@ export const Contact = () => {
           name="number"
           placeholder="Phone Number"
           required
-          className=" border-[0.5px] w-full p-3 rounded-lg my-2"
+          className=" border-[0.5px] w-full p-3 rounded-lg my-2 outline-none"
         />
         <ValidationError prefix="Number" field="number" errors={state.errors} />
 
@@ -64,7 +64,7 @@ export const Contact = () => {
           placeholder="Write a message"
           rows="5"
           required
-          className=" border-[0.5px] w-full p-3 rounded-lg my-2"
+          className=" border-[0.5px] w-full p-3 rounded-lg my-2 outline-none"
         />
         <ValidationError
           prefix="Message"

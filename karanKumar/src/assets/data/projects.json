@@ -72,7 +72,7 @@
     "slug":"cricfair",
     "excerpt": "Offline cricket scoring and team management app.",
     "description": "CricFair is a React Native-based cricket scoring and team management app designed for local matches. It enables offline scoring, predictive player selection for fair play, and integrates with YouTube overlays for live score display during streaming.",
-    "tech": ["React Native", "Expo", "TypeScript", "Node.js"],
+    "tech": ["TypeScript", "Expo", "Node.js", "React Native"],
     "category": "Mobile Application",
     "year": "2025",
     "status": "active",

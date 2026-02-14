@@ -11,6 +11,11 @@ import { motion } from "motion/react";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 
+import { FaReact } from "react-icons/fa6";
+import { FaJsSquare, FaNodeJs } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
+import SkillsCard from "../components/SkillsCard";
+
 export const About = () => {
   const width = window.innerWidth;
   const [text, setText] = useState("");
@@ -25,7 +30,7 @@ export const About = () => {
       timeRef.current = setTimeout(() => {
         let updated;
         if (inc) {
-          if (index.current >= word.length-1) {
+          if (index.current >= word.length - 1) {
             updated = "Full Stack Developer";
             index.current = text.length - 1;
             setInc(false);
@@ -216,6 +221,16 @@ export const About = () => {
           </NavLink>
         </div>
       </motion.div>
+
+      <div className="p-[5%] grid grid-cols-2 md:grid-cols-4 mx-auto gap-4">
+        <h2 className="col-span-2 md:col-span-4 mb-16 font-bold text-2xl text-center md:text-3xl">
+          Core Expertise
+        </h2>
+        <SkillsCard Icon={FaReact} percent={95} name="React" />
+        <SkillsCard Icon={FaNodeJs} percent={85} name="Node.js" />
+        <SkillsCard Icon={SiMongodb} percent={80} name="MongoDB" />
+        <SkillsCard Icon={FaJsSquare} percent={90} name="JavaScript" />
+      </div>
     </>
   );
 };

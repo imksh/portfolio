@@ -3,6 +3,7 @@ import infinity from "../assets/animations/infinity.json";
 import Lottie from "lottie-react";
 import { NavLink } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -13,10 +14,10 @@ export const Footer = () => {
       className="mt-8 flex flex-col items-center justify-center"
     >
       <div className="flex flex-col justify-center items-center gap-2 md:gap-4">
-        <p className="text-2xl md:text-6xl font-extrabold text-clip1">
+        <p className="!text-2xl md:!text-6xl font-extrabold text-clip1">
           Have projects in mind?
         </p>
-        <p className="md:text-3xl font-bold">Let's work together</p>
+        <p className=" !text-xl md:!text-3xl font-bold">Let's work together</p>
         <a href="https://api.whatsapp.com/send?phone=7295038835&text=Hi%20Karan%2C%20I%20visited%20your%20portfolio%20and%20wanted%20to%20connect.">
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -102,14 +103,34 @@ export const Footer = () => {
             <a href="mailto:karan03945@gmail.com" className="text-gray-300">
               ✉️ karan03945@gmail.com
             </a>
-            <motion.div whileTap={{ scale: 0.8 }} className="my-auto">
-              <Lottie
-                animationData={infinity}
-                loop
-                autoplay
-                className="w-40 h-40 cursor-pointer"
-              />
-            </motion.div>
+            <div className="flex gap-4 items-center mt-4">
+              {/* WhatsApp */}
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                href="https://wa.me/917295038835?text=Hi%20Karan%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 w-12 h-12 rounded-xl flex items-center justify-center hover:bg-green-600 transition"
+              >
+                <FaWhatsapp className="text-white w-6 h-6" />
+              </motion.a>
+
+              {/* Instagram */}
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                href="https://www.instagram.com/bagla_devi_?igsh=bWY1eHJpcm9jczJz"
+                target="_blank"
+                className="w-12 h-12 rounded-2xl overflow-hidden"
+              >
+                <img
+                  src="/images/insta-logo.webp"
+                  alt="instagram"
+                  className=""
+                />
+              </motion.a>
+            </div>
           </div>
         </div>
 
@@ -119,17 +140,6 @@ export const Footer = () => {
           Crafted with ❤️
         </div>
       </div>
-      {/* <div className="flex flex-col text-[12px] gap-2 my-4 md:text-[16px] items-center justify-center p-2 text-gray-500">
-        <motion.div whileTap={{ scale: 0.8 }}>
-          <Lottie
-            animationData={infinity}
-            loop
-            autoplay
-            className="w-40 h-40 cursor-pointer"
-          />
-        </motion.div>
-        <p>Crafted with ❤️ | ©️ IdioticMinds</p>
-      </div> */}
     </motion.div>
   );
 };

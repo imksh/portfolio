@@ -24,13 +24,13 @@ export const Card = (props) => {
     <motion.div
       whileHover={{ y: -5, scale: 1.01 }}
       whileTap={{ scale: 0.95 }}
-      className="flex flex-col h-full w-full"
+      className="flex flex-col h-full w-full relative"
     >
       <Link
         to={`/project/${slug}`}
         className={`bg-[#1a1d3c] p-4 rounded-2xl ${
           width > 500 ? "customHover" : "customInnerHover"
-        } relative flex flex-col h-full`}
+        } flex flex-col h-full`}
       >
         <div className="w-full object-contain min-h-[40%]">
           <img src={img} alt={title} className="w-full object-contain" />
