@@ -18,7 +18,11 @@ export const Footer = () => {
           Have projects in mind?
         </p>
         <p className=" !text-xl md:!text-3xl font-bold">Let's work together</p>
-        <a href="https://api.whatsapp.com/send?phone=7295038835&text=Hi%20Karan%2C%20I%20visited%20your%20portfolio%20and%20wanted%20to%20connect.">
+        <a
+          href="https://api.whatsapp.com/send?phone=7295038835&text=Hi%20Karan%2C%20I%20visited%20your%20portfolio%20and%20wanted%20to%20connect."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 1 }}
@@ -52,6 +56,7 @@ export const Footer = () => {
                 className="w-full h-full border-0"
                 allowFullScreen
                 loading="lazy"
+                title="Karan Kumar location map"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </motion.div>
@@ -94,6 +99,8 @@ export const Footer = () => {
             <a
               href="https://maps.app.goo.gl/NvqFrqdQL7qd8eVm8"
               className="text-gray-300"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               📍 Ayodhya Nagar, Bhopal
             </a>
@@ -122,12 +129,15 @@ export const Footer = () => {
                 whileTap={{ scale: 0.9 }}
                 href="https://www.instagram.com/imksh.3"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 rounded-2xl overflow-hidden"
               >
                 <img
                   src="/images/insta-logo.webp"
                   alt="instagram"
-                  className=""
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </motion.a>
             </div>

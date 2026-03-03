@@ -8,16 +8,20 @@ const Project = () => {
   const [filter, setFilter] = useState("");
   const [filteredData, setFilteredData] = useState(data);
   useEffect(() => {
-    const newData = data.filter((item) =>
-      item.title.toLowerCase().includes(input.toLowerCase()),
-    );
-    setFilteredData(newData);
+    const query = input.trim().toLowerCase();
 
-    if (filter === "") return;
-    const filtered = data.filter((item) =>
-      item.tech.toLowerCase().includes(filter),
-    );
-    setFilteredData(filtered);
+    const newData = data.filter((item) => {
+      const titleMatch = query
+        ? item.title.toLowerCase().includes(query)
+        : true;
+      const techMatch = filter
+        ? item.tech.some((techItem) => techItem.toLowerCase().includes(filter))
+        : true;
+
+      return titleMatch && techMatch;
+    });
+
+    setFilteredData(newData);
   }, [input, filter]);
 
   return (

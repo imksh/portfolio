@@ -31,24 +31,26 @@ export const Portfolio = () => {
       initial={{ opacity: 0.2, x: 0, y: 200 }}
       whileInView={{ opacity: 0.8, x: 0, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="flex flex-col mt-8"
+      className="section-container flex flex-col mt-10"
     >
-      <div className="flex flex-col items-center justify-center text-center w-[90%] md:w-[70%] lg:w-[55%] mx-auto">
+      <div className="flex flex-col items-center justify-center text-center w-[95%] md:w-[75%] lg:w-[60%] mx-auto">
         <h2 className="text-2xl md:text-5xl font-extrabold text-clip1 my-4 ">
           PortFolio Showcase
         </h2>
-        <p className="font-bold">
+        <p className="font-bold subtle-text">
           Explore My journey through Projects, Certificates. And Technical
           Expertise. Each Section Represents a Milestone in My Continuous
           Learning Path
         </p>
       </div>
 
-      <div className="flex mx-auto items-center justify-between md:grid md:grid-cols-3 md:gap-8 w-[95%] md:w-[70%] lg:w-[55%] mb-16">
+      <div className="glass-surface rounded-2xl py-2 px-1 flex mx-auto items-center justify-between md:grid md:grid-cols-3 md:gap-3 w-[98%] md:w-[75%] lg:w-[60%] mb-12 mt-5">
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 1 }}
-          className="px-3 md:px-0 md:justify-center py-3 rounded-2xl btn-gradient1 mt-8 customHover flex items-center gap-2"
+          className={`px-2 md:px-0 md:justify-center py-3 rounded-xl flex items-center gap-1 transition ${
+            project ? "btn-gradient1 customHover" : "hover:text-(--primary)"
+          }`}
           onClick={handleProjectBtn}
         >
           <FaCode className="" /> Projects
@@ -56,7 +58,9 @@ export const Portfolio = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 1 }}
-          className="px-3 md:px-0 md:justify-center  py-3 rounded-2xl btn-gradient1 mt-8 customHover flex items-center gap-2"
+          className={`px-2 md:px-0 md:justify-center py-3 rounded-xl flex items-center gap-1 transition ${
+            certificate ? "btn-gradient1 customHover" : "hover:text-(--primary)"
+          }`}
           onClick={handleCertificateBtn}
         >
           <LiaCertificateSolid className="" /> Certificates
@@ -64,7 +68,9 @@ export const Portfolio = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 1 }}
-          className="px-3 md:px-0 md:justify-center  py-3 rounded-2xl btn-gradient1 mt-8 customHover flex items-center gap-2"
+          className={`px-2 md:px-0 md:justify-center py-3 rounded-xl flex items-center gap-1 transition ${
+            skill ? "btn-gradient1 customHover" : "hover:text-(--primary)"
+          }`}
           onClick={handleSkillBtn}
         >
           <SiHyperskill className="" /> Skills

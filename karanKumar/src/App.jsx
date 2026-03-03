@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
@@ -20,21 +19,27 @@ function App() {
   const { setShowHeader } = useUiStore();
   return (
     <div
+      className="min-h-dvh"
       onClick={() => {
         setShowHeader(false);
       }}
     >
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <Scroll />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="/project/:slug" element={<ProjectPage />} />
-        <Route path="/*" element={<Error404 />} />
-      </Routes>
+      <main id="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="/project/:slug" element={<ProjectPage />} />
+          <Route path="/*" element={<Error404 />} />
+        </Routes>
+      </main>
       <Footer />
 
       <motion.a
@@ -43,6 +48,8 @@ function App() {
         whileTap={{ scale: 0.9 }}
         href="https://wa.me/917295038835?text=Hi%20Karan%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
         target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
         className="fixed bottom-5 right-5 z-50
              bg-[#25D366] w-14 h-14 rounded-full p-3
              shadow-[0_8px_25px_rgba(37,211,102,0.45)]"

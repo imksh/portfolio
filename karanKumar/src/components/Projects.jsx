@@ -8,7 +8,7 @@ export const Projects = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-8 gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-2 md:p-4 gap-8">
         {data.slice(0, 6).map((curr, index) => (
           <Card key={index} {...curr} />
         ))}
@@ -19,8 +19,10 @@ export const Projects = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 1 }}
             className="px-8 py-4 rounded-lg btn-gradient1 customHover flex items-center gap-2"
-           onClick={() => navigate("/project")}>
-            View More Projects <IoIosArrowForward className="text-xl font-bold"/> 
+            onClick={() => navigate("/project")}
+          >
+            View More Projects{" "}
+            <IoIosArrowForward className="text-xl font-bold" />
           </motion.button>
         </div>
       )}

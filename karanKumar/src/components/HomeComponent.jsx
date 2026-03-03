@@ -18,7 +18,7 @@ export const HomeComponent = () => {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="flex flex-col justify-center items-center min-h-[90dvh] "
+      className="section-container flex flex-col justify-center items-center min-h-[90dvh]"
     >
       <div className="flex gap-10 my-8">
         <motion.div
@@ -30,7 +30,7 @@ export const HomeComponent = () => {
             ease: "easeInOut",
           }}
           onClick={() => setBounce("code")}
-          className="shadow-[0_0_6px_10px_var(--primary)] p-3 md:p-4 rounded-full cursor-pointer"
+          className="soft-card p-3 md:p-4 rounded-full cursor-pointer"
         >
           <motion.div
             animate={
@@ -55,7 +55,7 @@ export const HomeComponent = () => {
             delay: 0.5,
           }}
           onClick={() => setBounce("java")}
-          className="shadow-[0_0_6px_10px_var(--primary)] p-3 md:p-4 cursor-pointer rounded-full"
+          className="soft-card p-3 md:p-4 cursor-pointer rounded-full"
         >
           <motion.div
             animate={
@@ -80,7 +80,7 @@ export const HomeComponent = () => {
             delay: 1,
           }}
           onClick={() => setBounce("react")}
-          className="shadow-[0_0_6px_10px_var(--primary)] p-3 md:p-4 cursor-pointer rounded-full"
+          className="soft-card p-3 md:p-4 cursor-pointer rounded-full"
         >
           <motion.div
             animate={
@@ -96,13 +96,16 @@ export const HomeComponent = () => {
           </motion.div>
         </motion.div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-2">
+      <div className="flex flex-col items-center justify-center gap-2 text-center">
         <h1 className="text-2xl md:text-3xl font-extrabold">
           Hi, I’m Karan Kumar
         </h1>
         <h1 className="text-3xl md:text-4xl font-extrabold text-clip1">
           Full Stack Developer
         </h1>
+        <p className="subtle-text max-w-xl mt-1">
+          I build fast, scalable products with clean user experiences.
+        </p>
       </div>
       <motion.div className="w-fit">
         <motion.div

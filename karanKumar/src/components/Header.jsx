@@ -37,24 +37,32 @@ export const Header = () => {
   }
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-99 text-white flex flex-col px-4 md:px-16 min-h-[10dvh] justify-center bg-(--headerColor) ${showHeaderMenu ? "translate-y-0" : "-translate-y-full"} transition duration-500`}
+      className={`fixed top-0 left-0 w-full z-99 text-white flex flex-col min-h-[10dvh] justify-center bg-(--headerColor)/95 border-b border-white/10 backdrop-blur-md ${showHeaderMenu ? "translate-y-0" : "-translate-y-full"} transition duration-500`}
       onClick={(e) => e.stopPropagation()}
     >
-      <div className="flex  justify-between  items-center h-[10dvh] z-99 bg-(--headerColor)">
+      <div className="section-container flex justify-between items-center h-[10dvh] z-99">
         <motion.button
           whileTap={{ scale: 0.5 }}
           onClick={() => navigate("/")}
           className="flex items-center gap-2.5 cursor-pointer"
+          aria-label="Go to home page"
         >
-          <p className="!text-xl md:text-3xl font-bold ">Karan Kumar</p>
+          <p className="text-xl md:text-3xl font-extrabold tracking-tight">
+            Karan Kumar
+          </p>
         </motion.button>
 
-        <div className="hidden md:flex list-none gap-4  items-center  my-auto">
+        <nav
+          className="hidden md:flex list-none gap-4  items-center  my-auto"
+          aria-label="Primary navigation"
+        >
           <motion.button
             whileTap={{ scale: 0.8 }}
             transition={{ duration: 0.8 }}
-            className={`cursor-pointer ${
-              page === "/" ? "text-(--primary)" : ""
+            className={`cursor-pointer px-3 py-1.5 rounded-xl ${
+              page === "/"
+                ? "text-(--primary) glass-surface"
+                : "hover:text-(--primary)"
             }`}
             onClick={() => navigate("/")}
           >
@@ -63,8 +71,10 @@ export const Header = () => {
           <motion.button
             whileTap={{ scale: 0.8 }}
             transition={{ duration: 0.8 }}
-            className={`cursor-pointer ${
-              page === "/about" ? "text-(--primary)" : ""
+            className={`cursor-pointer px-3 py-1.5 rounded-xl ${
+              page === "/about"
+                ? "text-(--primary) glass-surface"
+                : "hover:text-(--primary)"
             }`}
             onClick={() => navigate("/about")}
           >
@@ -73,8 +83,10 @@ export const Header = () => {
           <motion.button
             whileTap={{ scale: 0.8 }}
             transition={{ duration: 0.8 }}
-            className={`cursor-pointer ${
-              page === "/portfolio" ? "text-(--primary)" : ""
+            className={`cursor-pointer px-3 py-1.5 rounded-xl ${
+              page === "/portfolio"
+                ? "text-(--primary) glass-surface"
+                : "hover:text-(--primary)"
             }`}
             onClick={() => navigate("/portfolio")}
           >
@@ -83,8 +95,10 @@ export const Header = () => {
           <motion.button
             whileTap={{ scale: 0.8 }}
             transition={{ duration: 0.8 }}
-            className={`cursor-pointer ${
-              page === "/contact" ? "text-(--primary)" : ""
+            className={`cursor-pointer px-3 py-1.5 rounded-xl ${
+              page === "/contact"
+                ? "text-(--primary) glass-surface"
+                : "hover:text-(--primary)"
             }`}
             onClick={() => navigate("/contact")}
           >
@@ -95,6 +109,9 @@ export const Header = () => {
             whileTap={{ scale: 0.9 }}
             whileHover={{ scale: 1.1 }}
             href="https://github.com/imksh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open GitHub profile"
           >
             <FaGithub className="text-xl" />
           </motion.a>
@@ -102,10 +119,13 @@ export const Header = () => {
             whileTap={{ scale: 0.9 }}
             whileHover={{ scale: 1.1 }}
             href="https://www.linkedin.com/in/imksh3"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open LinkedIn profile"
           >
             <FaLinkedin className="text-xl" />
           </motion.a>
-        </div>
+        </nav>
 
         <div className="flex md:hidden">
           <motion.button
@@ -191,12 +211,18 @@ export const Header = () => {
               <motion.a
                 whileTap={{ scale: 0.9 }}
                 href="https://github.com/imksh"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open GitHub profile"
               >
                 <FaGithub className="text-2xl" />
               </motion.a>
               <motion.a
                 whileTap={{ scale: 0.9 }}
                 href="https://www.linkedin.com/in/imksh3"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open LinkedIn profile"
               >
                 <FaLinkedin className="text-2xl" />
               </motion.a>
