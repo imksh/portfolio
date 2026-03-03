@@ -2,4 +2,6 @@
 /robots.txt     /robots.txt    200
 /manifest.json  /manifest.json 200
 
+https://www.imksh.online/*   https://imksh.online/:splat   301!
+
 /*              /index.html    200
