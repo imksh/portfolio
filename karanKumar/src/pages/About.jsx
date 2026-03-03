@@ -211,7 +211,7 @@ export const About = () => {
           it’s something I genuinely enjoy and grow with every day.
         </p>
         <div className="flex justify-around md:justify-center items-center md:gap-12">
-          <a href="https://drive.google.com/drive/folders/1Ar5oRn0R4oCyd-CKKBih0-HI4eEYNYc4?usp=sharing">
+          <NavLink to="/resume?download=1">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 1 }}
@@ -219,7 +219,7 @@ export const About = () => {
             >
               <MdCloudDownload className="" /> Resume
             </motion.button>
-          </a>
+          </NavLink>
           <NavLink to="/project">
             <motion.button
               whileHover={{ scale: 1.05 }}

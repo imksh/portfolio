@@ -13,6 +13,7 @@ import ProjectPage from "./pages/ProjectPage";
 import useLenis from "./hooks/useLenis";
 import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "motion/react";
+import Resume from "./pages/Resume";
 
 function App() {
   useLenis();
@@ -37,6 +38,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/project" element={<Project />} />
           <Route path="/project/:slug" element={<ProjectPage />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="/*" element={<Error404 />} />
         </Routes>
       </main>

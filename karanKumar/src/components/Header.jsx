@@ -47,7 +47,7 @@ export const Header = () => {
           className="flex items-center gap-2.5 cursor-pointer"
           aria-label="Go to home page"
         >
-          <p className="text-xl md:text-3xl font-extrabold tracking-tight">
+          <p className="!text-xl md:!text-3xl font-extrabold tracking-tight">
             Karan Kumar
           </p>
         </motion.button>
@@ -91,6 +91,18 @@ export const Header = () => {
             onClick={() => navigate("/portfolio")}
           >
             Portfolio
+          </motion.button>
+          <motion.button
+            whileTap={{ scale: 0.8 }}
+            transition={{ duration: 0.8 }}
+            className={`cursor-pointer px-3 py-1.5 rounded-xl ${
+              page === "/resume"
+                ? "text-(--primary) glass-surface"
+                : "hover:text-(--primary)"
+            }`}
+            onClick={() => navigate("/resume")}
+          >
+            Resume
           </motion.button>
           <motion.button
             whileTap={{ scale: 0.8 }}
@@ -192,6 +204,20 @@ export const Header = () => {
               }`}
             >
               <p>Portfolio</p>
+            </motion.button>
+
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowHeader(false);
+                navigate("/resume");
+              }}
+              className={`cursor-pointer w-full flex justify-baseline ${
+                page === "/resume" ? "text-(--primary)" : ""
+              }`}
+            >
+              <p>Resume</p>
             </motion.button>
 
             <motion.button
