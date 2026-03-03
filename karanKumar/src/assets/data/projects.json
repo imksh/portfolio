@@ -237,7 +237,7 @@
     "Clean UI with modern styling"
   ],
   "img": "/images/portfolio-website/1.png",
-  "live": "https://imksh3.netlify.app/",
+  "live": "https://imksh.online/",
   "github": "https://github.com/imksh/portfolio/tree/main/karanKumar",
     "challenges":"Structuring the application to remain scalable while maintaining consistent design patterns was a major focus. Ensuring performance optimization for faster load times and creating a clean visual hierarchy to present projects effectively required deliberate UI/UX decisions.",
     "learnings":"Building my portfolio improved my UI/UX thinking and design consistency. I learned how to structure content for clarity, optimize performance, and present projects strategically to communicate technical depth effectively"

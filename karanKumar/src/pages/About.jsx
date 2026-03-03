@@ -15,8 +15,10 @@ import { FaReact } from "react-icons/fa6";
 import { FaJsSquare, FaNodeJs } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import SkillsCard from "../components/SkillsCard";
+import SEO from "../components/SEO";
 
 export const About = () => {
+  const MotionDiv = motion.div;
   const width = window.innerWidth;
   const [text, setText] = useState("");
   const [inc, setInc] = useState(true);
@@ -57,14 +59,23 @@ export const About = () => {
       }, 150);
     };
     fun();
-  }, [text]);
+  }, [text, inc]);
 
   const location = useLocation();
   const page = location.pathname;
   return (
     <>
+      {page === "/about" && (
+        <SEO
+          title="About Karan Kumar | Full Stack Developer"
+          description="Learn about Karan Kumar, a full stack developer focused on building high-performance web apps with React, Node.js, JavaScript, and scalable backend systems."
+          keywords="About Karan Kumar, full stack engineer, React Node developer, developer profile, JavaScript engineer"
+          canonical="https://imksh.online/about"
+          image="/images/profile.png"
+        />
+      )}
       <div className="grid grid-cols-1 md:grid-cols-[60%_40%] min-h-[90dvh] items-center mt-4 md:mt-0">
-        <motion.div
+        <MotionDiv
           className="w-[90%] md:w-[70%] mx-auto order-2 md:order-1"
           initial={{
             opacity: 0,
@@ -158,7 +169,7 @@ export const About = () => {
               </a>
             </motion.div>
           </div>
-        </motion.div>
+        </MotionDiv>
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 1 }}

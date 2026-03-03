@@ -2,6 +2,7 @@ import data from "../assets/data/projects.json";
 import { Card } from "../components/Card";
 import { useState, useEffect } from "react";
 import { IoIosSearch } from "react-icons/io";
+import SEO from "../components/SEO";
 
 const Project = () => {
   const [input, setInput] = useState("");
@@ -26,6 +27,13 @@ const Project = () => {
 
   return (
     <>
+      <SEO
+        title="All Projects | Karan Kumar Developer Portfolio"
+        description="Browse all projects by Karan Kumar including full stack apps, React interfaces, mobile applications, and AI-based solutions."
+        keywords="all developer projects, full stack portfolio, React project showcase, Node.js projects, JavaScript apps"
+        canonical="https://imksh.online/project"
+        image="/images/portfolio-website/1.png"
+      />
       <h1 className="text-3xl text-center font-bold my-8">
         All Projects <span className="text-sm">({data.length})</span>
       </h1>

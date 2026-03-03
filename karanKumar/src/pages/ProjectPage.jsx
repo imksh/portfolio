@@ -7,6 +7,7 @@ import Lottie from "lottie-react";
 import Challenge from "../assets/animations/assignmets.json";
 import Learning from "../assets/animations/notes.json";
 import Error404 from "./Error404";
+import SEO from "../components/SEO";
 
 const ProjectPage = () => {
   const { slug } = useParams();
@@ -25,6 +26,14 @@ const ProjectPage = () => {
 
   return (
     <div className="section-container min-h-screen py-12 md:py-16">
+      <SEO
+        title={`${project.title} | Project Case Study - Karan Kumar`}
+        description={project.excerpt || project.description}
+        keywords={`${project.title}, ${project.tech.join(", ")}, developer case study, full stack project, Karan Kumar`}
+        canonical={`https://imksh.online/project/${project.slug}`}
+        image={project.img}
+        type="article"
+      />
       {/* PROJECT HERO */}
       <section className="soft-card rounded-3xl grid md:grid-cols-2 gap-10 md:gap-12 items-center p-6 md:p-10">
         {/* LEFT */}

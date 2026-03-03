@@ -6,8 +6,12 @@ import { Projects } from "../components/Projects";
 import { Certificates } from "../components/Certificates";
 import { MySkill } from "../components/MySkill";
 import { motion } from "motion/react";
+import { useLocation } from "react-router-dom";
+import SEO from "../components/SEO";
 
 export const Portfolio = () => {
+  const MotionDiv = motion.div;
+  const location = useLocation();
   const [project, setProject] = useState(true);
   const [certificate, setCertificate] = useState(false);
   const [skill, setSkill] = useState(false);
@@ -27,12 +31,21 @@ export const Portfolio = () => {
     setSkill(true);
   };
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0.2, x: 0, y: 200 }}
       whileInView={{ opacity: 0.8, x: 0, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
       className="section-container flex flex-col mt-10"
     >
+      {location.pathname === "/portfolio" && (
+        <SEO
+          title="Portfolio Projects, Certificates & Skills | Karan Kumar"
+          description="Explore full stack projects, technical certificates, and core development skills by Karan Kumar across React, Node.js, MongoDB, and modern web technologies."
+          keywords="developer portfolio projects, React projects, full stack projects, programming certificates, web development skills"
+          canonical="https://imksh.online/portfolio"
+          image="/images/portfolio-website/1.png"
+        />
+      )}
       <div className="flex flex-col items-center justify-center text-center w-[95%] md:w-[75%] lg:w-[60%] mx-auto">
         <h2 className="text-2xl md:text-5xl font-extrabold text-clip1 my-4 ">
           PortFolio Showcase
@@ -79,6 +92,6 @@ export const Portfolio = () => {
       {project ? <Projects /> : null}
       {certificate ? <Certificates /> : null}
       {skill ? <MySkill /> : null}
-    </motion.div>
+    </MotionDiv>
   );
 };

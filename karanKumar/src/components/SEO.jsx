@@ -6,39 +6,58 @@ const SEO = ({
   description,
   keywords,
   canonical,
+  image = "/images/profile.png",
+  type = "website",
+  twitterCard = "summary_large_image",
   noIndex = false,
 }) => {
   const location = useLocation();
+  const siteUrl = (
+    import.meta.env.VITE_SITE_URL || "https://imksh.online"
+  ).replace(/\/$/, "");
+  const canonicalUrl = canonical || `${siteUrl}${location.pathname}`;
+  const imageUrl = image.startsWith("http")
+    ? image
+    : `${siteUrl}${image.startsWith("/") ? image : `/${image}`}`;
+
+  const setMeta = (selector, attr, value) => {
+    if (!value) return;
+    let element = document.head.querySelector(selector);
+    if (!element) {
+      element = document.createElement("meta");
+      element.setAttribute(
+        attr,
+        selector.match(/['\"]([^'\"]+)['\"]/)?.[1] || "",
+      );
+      document.head.appendChild(element);
+    }
+    element.setAttribute("content", value);
+  };
 
   useEffect(() => {
-    // TITLE
     if (title) {
       document.title = title;
     }
 
-    // DESCRIPTION
-    if (description) {
-      let meta = document.querySelector("meta[name='description']");
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.name = "description";
-        document.head.appendChild(meta);
-      }
-      meta.content = description;
-    }
+    setMeta("meta[name='description']", "name", description);
+    setMeta("meta[name='keywords']", "name", keywords);
+    setMeta(
+      "meta[name='robots']",
+      "name",
+      noIndex
+        ? "noindex,nofollow"
+        : "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    );
+    setMeta("meta[property='og:type']", "property", type);
+    setMeta("meta[property='og:title']", "property", title);
+    setMeta("meta[property='og:description']", "property", description);
+    setMeta("meta[property='og:url']", "property", canonicalUrl);
+    setMeta("meta[property='og:image']", "property", imageUrl);
+    setMeta("meta[name='twitter:card']", "name", twitterCard);
+    setMeta("meta[name='twitter:title']", "name", title);
+    setMeta("meta[name='twitter:description']", "name", description);
+    setMeta("meta[name='twitter:image']", "name", imageUrl);
 
-    // KEYWORDS (optional)
-    if (keywords) {
-      let meta = document.querySelector("meta[name='keywords']");
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.name = "keywords";
-        document.head.appendChild(meta);
-      }
-      meta.content = keywords;
-    }
-
-    // CANONICAL
     let link = document.querySelector("link[rel='canonical']");
     if (!link) {
       link = document.createElement("link");
@@ -46,20 +65,17 @@ const SEO = ({
       document.head.appendChild(link);
     }
 
-    link.href =
-      canonical ||
-      `https://shreebaglamukhi.com${location.pathname}`;
-
-    // ROBOTS
-    let robots = document.querySelector("meta[name='robots']");
-    if (!robots) {
-      robots = document.createElement("meta");
-      robots.name = "robots";
-      document.head.appendChild(robots);
-    }
-
-    robots.content = noIndex ? "noindex,nofollow" : "index,follow";
-  }, [title, description, keywords, canonical, noIndex, location.pathname]);
+    link.href = canonicalUrl;
+  }, [
+    title,
+    description,
+    keywords,
+    canonicalUrl,
+    imageUrl,
+    type,
+    twitterCard,
+    noIndex,
+  ]);
 
   return null;
 };

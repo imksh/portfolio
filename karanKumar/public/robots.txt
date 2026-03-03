@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Avoid crawling internal search/error pages if they exist later
+Disallow: /404
+
+Sitemap: https://imksh.online/sitemap.xml
