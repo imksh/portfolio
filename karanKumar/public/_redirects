@@ -1,7 +1,8 @@
+http://imksh.online/*  https://imksh.online/:splat  301!
+https://www.imksh.online/*  https://imksh.online/:splat  301!
+
 /sitemap.xml    /sitemap.xml   200
 /robots.txt     /robots.txt    200
 /manifest.json  /manifest.json 200
-
-https://www.imksh.online/*   https://imksh.online/:splat   301!
 
 /*              /index.html    200
